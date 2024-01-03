@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: treeleaf
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: treeleaf
+  template:
+    metadata:
+      labels:
+        app: treeleaf
+    spec:
+      containers:
+      - name: treeleaf
+        image: treeleaf:latest
+        ports:
+        - containerPort: 80
