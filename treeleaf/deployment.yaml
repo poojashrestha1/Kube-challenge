@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: treeleaf
+  name: react-task
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: treeleaf
+      app: react-task
   template:
     metadata:
       labels:
-        app: treeleaf
+        app: react-task
     spec:
       containers:
-      - name: treeleaf
-        image: treeleaf:latest
+      - name: react-task
+        image: 1pooja1/react-task
         ports:
-        - containerPort: 80
+        - containerPort: 3000
